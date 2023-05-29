@@ -1,0 +1,7 @@
+//start hadoop
+
+stop-all.sh
+start-all.sh
+hdfs namenode -format
+start-all.sh
+hive

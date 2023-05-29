@@ -1,0 +1,35 @@
+//create database:
+
+create database data;
+use data;
+
+create table student(
+id INT,
+name STRING,
+salary INT)
+ROw FORMAT DELIMITED FIELDS SEPRETED BY ',';
+
+
+LOAD DATA LOCAL INPATH
+'path of file'
+into table student;
+
+
+select * from student;
+
+
+alter table student rename to std;
+
+
+//create external table
+
+create external table stdext(
+id INT,
+name STRING,
+salary INT)
+ROW FORMAT DELIMITED FIELDS SEPRETED BY ',';
+
+describe extended stdext;
+
+
+
